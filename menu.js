@@ -184,9 +184,9 @@ function displayButtons() {
 
     buttons.innerHTML = categoryButtons;
 
-    const filterButtons = buttons.querySelectorAll(".filter");
+    const filter = buttons.querySelectorAll(".filter");
     
-    filterButtons.forEach(function (button) {
+    filter.forEach(function (button) {
         button.addEventListener("click", function (e) {
             const category = e.currentTarget.dataset.id;
             const menuCategory = menu.filter(function (menuItem) {
