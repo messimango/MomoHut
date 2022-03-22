@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/6c7ef19b6b.css">
+    <link rel="stylesheet" href="./checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <nav id="nav-bar" class="nav-bar">
+        <div class="link">
+             <h1 class="logo"><img id="header-img" src="logo.png"></h1>
+             <ul class="nav-links">
+                 <li><a href="../MomoHut.html" class="nav-link">Home</a></li>
+                 <li><a href="../menu/menu.html" class="nav-link">Menu</a></li>
+                 <li><a href="#menu" class="nav-link">Video</a></li>
+                 <li><a href="./order.html" class="nav-link">Order</a></li>
+                 <li><a href="./checkout.html" class="basket nav-link"><i class="menuBasket fa fa-shopping-basket"></i> Basket:<span class="amountInBasket">0</span></a></li>
+             </ul> 
+        </div>
+    </nav>
+    <div class="summary">
+        <h1>Summary</h1>
+        <div class="summary-items"></div>
+
+
+        <!-- Charges -->
+        
+        <div class="final-total">
+            <div class="charges">
+                <div class="subtotal">Subtotal</div>
+                <div class="deliveryFee">Delivery Fee</div>
+                <div class="taxes">Fees and Estimated Tax</div>
+                <div class="tip">Tip</div>
+                <hr>
+                <div class="amountDue">Amount Due</div>                
+            </div>
+
+            <div class="charges-amount">
+                <div class="subtotal-amount">CA$<span id="subtotal"></span></div>
+                <div class="delivery-amount">CA$<span id="delivery">5.00</span></div>
+                <div class="tax-amount">CA$<span id="tax"></span></div>
+                <div class="tip-amount">CA$<span id="tip">10.00</span></div>
+                <div class="total-amount">CA$<span id="total"></span></div>
+            </div>
+        </div>        
+    </div>
+
+    </div>
+    
+    
+</body>
+<script src="./checkout.js"></script>
+</html>
