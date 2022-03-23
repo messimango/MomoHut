@@ -206,32 +206,6 @@ function setItems(menu) {
     localStorage.setItem('itemInBasket', JSON.stringify(localBasket));
 }
 
-
-
-// nav bar on top of screen
-
-window.onscroll = function() {myFunction()};
-
-var navbar = document.querySelector(".nav-bar");
-
-var hover = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= hover) {
-    navbar.classList.add("hover")
-  } else {
-    navbar.classList.remove("hover");
-  }
-}
-
-
-// jump to hash cleaner 
-
-window.addEventListener("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 100);
-});
-
-
 // load number of items in local basket
 
 let itemNumbers = localStorage.getItem('basketNumbers')
@@ -241,7 +215,7 @@ function renderBasket() {
     }
 }
 
-renderBasket();
+
 
 // Calculate price
 
@@ -258,7 +232,10 @@ function totalPrices(menu) {
 
 
 // Code to load in Checkout page
+
 loadBasketItems();
+renderBasket();
+
 
 function loadBasketItems() {
     let itemInBasket = localStorage.getItem('itemInBasket')
@@ -299,7 +276,61 @@ function loadBasketItems() {
         subtotal.innerHTML = totalCost
         tax.innerHTML = parseFloat(totalCost * 0.13).toFixed(2)
         amountDue.innerHTML = parseFloat((totalCost * 1.13) + tip + delivery).toFixed(2)
-    }
+
+        
+    }   
+   
+}
+
+
+
+function clearBasket() {
+    window.localStorage.clear();
+    document.querySelector('.amountInBasket').textContent = 0;
+    document.querySelector('.summary-items').innerHTML = '';
+    document.getElementById('subtotal').innerHTML = 0;
+    document.getElementById('tax').innerHTML = 0;
+    document.getElementById('total').innerHTML= parseFloat(15.00).toFixed(2);
+}
+
+
+const plusButton = document.querySelectorAll('.increase-amount')
+for (let i = 0; i < plusButton.length; i++) {
+    plusButton[i].addEventListener('click', () => {
+        increaseBasket();
+    })    
+}
+
+const minusButton = document.querySelectorAll('.decrease-amount')
+for (let i = 0; i < minusButton.length; i++) {
+    minusButton[i].addEventListener('click', () => {
+        console.log('clicked')
+        decreaseBasket();
+    })    
+}
+
+
+
+function increaseBasket(menu) {
+    let basketNumber = localStorage.getItem('basketNumbers');
+    basketNumber = parseInt(basketNumber);
+    localStorage.setItem('basketNumbers', basketNumber + 1);
+    document.querySelector('.amountInBasket').innerHTML = basketNumber + 1
+
+    setItems(menu);
+}
+
+function decreaseBasket() {
+    let basketNumber = localStorage.getItem('basketNumbers');
+    basketNumber = parseInt(basketNumber);
+    localStorage.setItem('basketNumbers', basketNumber - 1);
+    document.querySelector('.amountInBasket').innerHTML = basketNumber - 1;
+
+    itemInBasket = localStorage.getItem('itemInBasket')
+    itemInBasket = JSON.parse(itemInBasket)
+
+    console.log(itemInBasket)
+    console.log(itemInBasket[7])
 }
 
 
@@ -307,4 +338,25 @@ function loadBasketItems() {
 
 
 
+// nav bar on top of screen
 
+window.onscroll = function() {myFunction()};
+
+var navbar = document.querySelector(".nav-bar");
+
+var hover = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= hover) {
+    navbar.classList.add("hover")
+  } else {
+    navbar.classList.remove("hover");
+  }
+}
+
+
+// jump to hash cleaner 
+
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
+});

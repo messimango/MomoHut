@@ -187,5 +187,10 @@ hr {
     width: 383px;
 }
 
-
-
+.clearBasket {
+    cursor: pointer;
+    color: red;
+    background-color: white;
+    padding: 5px;
+    border-radius: 25px;
+}
