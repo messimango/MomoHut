@@ -340,14 +340,15 @@ function decreaseBasket() {
 
 // nav bar on top of screen
 
-window.onscroll = function() {myFunction()};
+window.onscroll = myFunction;
 
 var navbar = document.querySelector(".nav-bar");
 
 var hover = navbar.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset >= hover) {
+    console.log('hello')
+  if (window.pageYOffset > 1000) {
     navbar.classList.add("hover")
   } else {
     navbar.classList.remove("hover");

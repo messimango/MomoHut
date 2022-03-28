@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,200;1,300;1,600&family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Hurricane&family=Poppins:ital,wght@0,400;0,800;1,200;1,300;1,600&family=Rubik:wght@600&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* nav */
@@ -17,6 +26,7 @@
     width: 100%;
     top: 0px;
     background-color: wheat;
+    z-index: 100;
 }
 
 a {
@@ -67,34 +77,113 @@ ul {
     color: darkgray;
 }
 
-/* home page */
+/* main image */
 
-.front {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 4rem;
-    justify-content: center;
-    align-items: center;
+.mainImage {
+    opacity: 80%;
 }
 
-#home {
-    margin-top: 100px;
+.home {
+    background: black;
+    width: 100%;
 }
 
-#front-title {
-    margin: auto;
+.home img {
+    width: 100%;
+    height: 50vw;
 }
 
-#front-p {
-    margin: 200px;
-}
-
-#home-img {
+.aboutus {
+    width: 60vw;
     background-color: white;
+    text-align: center;
+    position: relative;
+    top: -43vw;
+    z-index: 4;
+    padding: 40px;
 }
 
-#front-p-a {
-    font-size: 0.5rem;
+.aboutus a {
+    border-left: #C81025 1px solid;
+    color: black;
+    font-family: 'Dosis';
+    margin-left: 20px;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.aboutus h2 {
+    font-size: 3vw;
+}
+
+.aboutus h2 img{
+    width: 3vw;
+    margin-right: 10px;
+}
+
+.aboutus h1 {
+    font-size: 5vw;
+    font-family: 'Rubik';
+    color: #C81025;
+}
+
+.aboutus p {
+    font-size: 1vw;
+}
+
+.reservation-container {
+    position: relative;
+    top: -20vw;
+    width: 70vw;
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.reservation-container h1 {
+    font-size: 3vw;
+    font-family: 'Rubik';
+    margin-bottom: 20px;
+}
+
+.reservation-container h3{
+    font-size: 1vw;
+    margin-bottom: 20px;
+}
+
+.reservation-container a{
+    background-color: #C81025;
+    padding: 5px 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.inputs input{
+    margin: 10px;
+    width: 260px;
+    font-size: 20px;
+}
+
+#comments {
+    width: 550px;
+    text-align: left;
+}
+
+.reservation-container button{
+    margin-top: 40px;
+    background-color: #C81025;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    font-family: 'Rubik';
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.reservation-container i {
+    font-size: 180px;
+    color: green;
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width:400px){
@@ -110,4 +199,82 @@ ul {
 .menuBasket {
     color: red;
     font-size: 25px;
+}
+
+
+/* Main Image slider */
+
+
+
+
+/* footer */
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-footer {
+    width: 400px;
+    margin: 50px;
+}
+
+.footer-hours {
+    font-family: 'Rubik';
+    width: 400px;
+    margin: 50px;
+}
+
+.footer-hours h3{
+    margin-bottom: 8px;
+}
+
+.contact-stuff {
+    display: flex;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.contact-icons .fa-phone {
+    margin-top: 85px;
+}
+
+.contact-icons .fa-at {
+    margin-top: 59px;
+}
+
+.socials-footer {
+    width: 250px;
+    margin: 50px;
+}
+
+.socials-footer h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.socials-footer i {
+    font-size: 25px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.note {
+    margin-top: 5px;
+    width: 300px;
+    font-size: 13px;
+}
+
+#note {
+    color: red;
 }
