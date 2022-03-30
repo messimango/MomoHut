@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/6c7ef19b6b.css">
-    <link href="MomoHut.css" type="text/css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="icon" href="./namaste.png">
+    <link rel="stylesheet" href="./thanks.css">
+    <title>Thank you</title>
 </head>
 <body>
     <header id="header" class="header">
@@ -25,70 +26,12 @@
          </nav>
 
     </header>
-
-    <div class="home" id="home">
-        <img class="mainImage" src="./main3.jpg" alt="">
-    </div>   
-
-    <div class="aboutus">        
-         <h2><img src="./namaste.png" alt="Namaste">Welecome to <br></h2>
-            <h1>MomoHut</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                <br> Nunc consequat interdum varius sit amet mattis vulputate.<br><br>
-                 Posuere urna nec tincidunt praesent semper feugiat. Quam viverra orci sagittis eu volutpat odio facilisis mauris. <br>
-                  Lacus suspendisse faucibus interdum posuere lorem ipsum dolor.
-                  Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. <br>
-                  Morbi non arcu risus quis. Id interdum velit laoreet id. Mi eget mauris pharetra et ultrices neque ornare. Nunc non blandit massa enim nec dui. Porta non pulvinar neque laoreet. In pellentesque massa placerat duis ultricies lacus sed. 
-                  <br> <br>
-                  Mauris a diam maecenas sed enim ut sem viverra aliquet. Quis risus sed vulputate odio ut enim blandit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis.
-                </p>
-        <br>
-        <a href="#reservation">Reservations</a> <a href="./menu/menu.html">Menu</a> <a href="./checkout/order.html">Order Now</a>
-    </div>
-
     <div class="reservation-container" id="reservation">
-        <h1>Make a Reservation</h1>
-        <h3>You can book a table online easily in just a minute. Reservations are for lunch and dinner,<br> check the availability of your table & book it now!</h3>
-        <div class="inputs">
-            <form>
-                <label for="name">Your Name</label>
-                <input id="inputname" type="text" name="name" required placeholder="Your Name">
-                <input id="email" label="Your E-mail" type="email" name="email" required>
-                <br>
-                <input id="phone" type="tel" name="phone" pattern="[0-9]{10}" placeholder="123-456-7890" required>
-                <input id="noPeople" placeholder="Number of People" list="number-of-people" name="no-of-people" required> 
-                <br>
-                <input type="date" id="date" name="date" value="DD MM YYY" max="2023-09-31" required>
-                <input id="time" type="time" min="10:00" max="24:00" required>
-                <br>
-                <textarea type="text" rows="4" placeholder="Add special requests or comments(optional)" id="comments"></textarea>
-                <br>
-                
-                <button type="submit" onclick="submitted()"> Reserve a Table</button>
-            </form>
-        </div>
+        <i class="fa-regular fa-circle-check"></i><br>
+        Thank you, Your reservation has been submitted!
+        <br>
+        We will send you a validation email or give you a call to finalize the booking.
     </div>
-    <!-- Data set for reservation -->
-    <datalist id="number-of-people">
-        <option value="1 Person"></option>
-        <option value="2 people"></option>
-        <option value="3 people"></option>
-        <option value="4 people"></option>
-        <option value="5 people"></option>
-        <option value="6 people"></option>
-        <option value="7 people"></option>
-        <option value="8 people"></option>
-        <option value="9 people"></option>
-        <option value="10 people"></option>
-        <option value="11 people"></option>
-        <option value="12 people"></option>
-        <option value="13 people"></option>
-        <option value="14 people"></option>
-        <option value="15 people"></option>
-        <option value="Larger Party"></option>
-    </datalist>
-
-
     <footer>
         <div class="about-footer">
             <img src="./logo.png" alt="Momo Hut Logo">
@@ -152,6 +95,5 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/3211c4b56e.js" crossorigin="anonymous"></script>
-    <script src="./MomoHut.js"></script>
 </body>
 </html>
