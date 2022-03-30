@@ -30,15 +30,8 @@ const reservation = document.querySelector('.reservation-container');
 // submit button
 
 function submitted() {
-    const name = document.getElementById('inputname')
-    const email = document.getElementById('email')
-    const phone = document.getElementById('phone')
-    console.log(email, phone)
-    if (name.value != '' && phone.value != '') {
-        reservation.innerHTML = `<i class="fa-regular fa-circle-check"></i><br>
-        Thank you, Your reservation has been submitted! <br> We will send you a validation email or give you a call to finalize the booking.`
-    }
-   
+   reservation.innerHTML = `<i class="fa-regular fa-circle-check"></i><br>
+    Thank you, Your reservation has been submitted! <br> We will send you a validation email or give you a call to finalize the booking.`
 }
 
 // hashtag slightly above

@@ -50,7 +50,7 @@
         <h1>Make a Reservation</h1>
         <h3>You can book a table online easily in just a minute. Reservations are for lunch and dinner,<br> check the availability of your table & book it now!</h3>
         <div class="inputs">
-            <form>
+            <form onsubmit="submitted()">
                 <label for="name">Your Name</label>
                 <input id="inputname" type="text" name="name" required placeholder="Your Name">
                 <input id="email" label="Your E-mail" type="email" name="email" required>
@@ -64,7 +64,7 @@
                 <textarea type="text" rows="4" placeholder="Add special requests or comments(optional)" id="comments"></textarea>
                 <br>
                 
-                <button type="submit" onclick="submitted()"> Reserve a Table</button>
+                <button type="submit"> Reserve a Table</button>
             </form>
         </div>
     </div>
