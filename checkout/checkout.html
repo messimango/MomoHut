@@ -31,22 +31,28 @@
         <div class="final-total">
             <div class="charges">
                 <div class="subtotal">Subtotal</div>
-                <div class="deliveryFee">Delivery Fee</div>
                 <div class="taxes">Fees and Estimated Tax</div>
                 <div class="tip">Tip</div>
-                <hr>
-                <div class="amountDue">Amount Due</div>                
+                <hr>             
+                <div class="amountDue hidden">Current Total</div>                
             </div>
 
             <div class="charges-amount">
                 <div class="subtotal-amount">CA$<span id="subtotal">0.00</span></div>
-                <div class="delivery-amount">CA$<span id="delivery">5.00</span></div>
                 <div class="tax-amount">CA$<span id="tax">0.00</span></div>
-                <div class="tip-amount">CA$<span id="tip">10.00</span></div>
-                <div class="total-amount">CA$<span id="total">15.00</span></div>
+                <div class="tip-amount">CA$ <span class="tipspan"><input type="number" min="0" id="tip" value="10" placeholder="10"></input></span></div>
+                <div class="total-amount hidden">CA$<span id="total"></span></div>
             </div>
         </div>
-        <a class="clearBasket" onclick="clearBasket()">Clear Basket</a>        
+
+        <a class="clearBasket" onclick="clearBasket()">Clear Basket</a>
+        <br>
+        <br>
+        <a class="continue" onclick="addDilevery()">Continue</a>
+        <a class="calc hidden">Calculate</a>
+        <br>
+        <a class="reset hidden" onclick="goBack()">Go Back</a>   
+
     </div>
 
     </div>
