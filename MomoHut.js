@@ -34,6 +34,7 @@ function submitted() {
     Thank you, Your reservation has been submitted! <br> We will send you a validation email or give you a call to finalize the booking.`
 }
 
+
 // hashtag slightly above
 
 function offsetAnchor() {
