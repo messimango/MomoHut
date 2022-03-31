@@ -148,6 +148,10 @@ ul {
     font-size: larger;
 }
 
+#tip {
+    width: 40px;
+}
+
 .trash {
     color: red;
     display: flex;
@@ -193,4 +197,39 @@ hr {
     background-color: white;
     padding: 5px;
     border-radius: 25px;
+}
+
+.continue {
+    background-color: white;
+    padding: 8px;
+    color: blue;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.calc {
+    background-color: white;
+    padding: 8px;
+    color: red;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.reset {
+    background-color: white;
+    padding: 8px;
+    color: blue;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.hidden {
+    display: none;
+    color: transparent;
+    background: transparent;
+    text-decoration: none;
 }

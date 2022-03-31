@@ -268,16 +268,12 @@ function loadBasketItems() {
         let delivery = document.getElementById('delivery')
 
         tip = Number(tip.innerHTML)
-        delivery = Number(delivery.innerHTML)
 
         let totalCost = localStorage.getItem('totalPrice')
         totalCost = parseFloat(totalCost).toFixed(2)
         
         subtotal.innerHTML = totalCost
-        tax.innerHTML = parseFloat(totalCost * 0.13).toFixed(2)
-        amountDue.innerHTML = parseFloat((totalCost * 1.13) + tip + delivery).toFixed(2)
-
-        
+        tax.innerHTML = parseFloat(totalCost * 0.13).toFixed(2)        
     }   
    
 }
@@ -361,3 +357,38 @@ function myFunction() {
 window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
 });
+
+
+// continue
+
+function addDilevery() {
+    const clearBasket = document.querySelector('.clearBasket')
+    clearBasket.classList.add('hidden')
+    const summaryItems = document.querySelector('.summary-items')
+    summaryItems.classList.add('hidden')
+    const tip = document.getElementById("tip")
+    var tipValue = tip.value
+    const tipspan = document.querySelector('.tipspan')
+    tipspan.innerHTML = tipValue
+    const amountDue = document.getElementById('total')
+    const subtotal = document.getElementById('subtotal')
+    const tax = document.getElementById('tax')
+    subtotalAmount = Number(subtotal.innerHTML) 
+    taxamount = Number(tax.innerHTML) 
+    amountDue.innerHTML =  taxamount + subtotalAmount + Number(tipValue);
+    
+    document.querySelector('.amountDue').classList.remove('hidden')
+    document.querySelector('.total-amount').classList.remove('hidden')
+    document.querySelector('.continue').classList.add('hidden')
+    document.querySelector('.reset').classList.remove('hidden')
+    document.querySelector('.calc').classList.remove('hidden')
+}
+
+
+
+
+// reset
+
+function goBack() {
+    window.location.reload();
+}
