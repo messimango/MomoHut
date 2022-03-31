@@ -211,7 +211,7 @@ function setItems(menu) {
 let itemNumbers = localStorage.getItem('basketNumbers')
 function renderBasket() {   
         if (itemNumbers) {
-        document.querySelector('.amountInBasket').textContent = itemNumbers 
+        document.querySelector('.amountInBasket').innerHTML = itemNumbers 
     }
 }
 
@@ -232,9 +232,9 @@ function totalPrices(menu) {
 
 
 // Code to load in Checkout page
-
-loadBasketItems();
 renderBasket();
+loadBasketItems();
+
 
 
 function loadBasketItems() {
